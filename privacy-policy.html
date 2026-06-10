@@ -49,7 +49,7 @@
             font-size: 32px;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 24px;
+            margin-bottom: 0;
         }
 
         .logo .delta {
@@ -58,56 +58,28 @@
             margin-right: 6px;
         }
 
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin: 0 0 8px;
+        /* ─── Termly snippet overrides ─────────────────────────────────
+           Force Termly's injected content to inherit the page's dark
+           theme. Termly renders light-background text by default.
+        ──────────────────────────────────────────────────────────────── */
+        #termly-code-snippet-support,
+        #termly-code-snippet-support * {
+            background-color: var(--bg) !important;
+            color: var(--text) !important;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                "Helvetica Neue", Arial, sans-serif !important;
         }
 
-        .effective {
-            color: var(--muted);
-            font-size: 15px;
-            margin: 0;
+        #termly-code-snippet-support a {
+            color: var(--accent) !important;
         }
 
-        section {
-            margin-bottom: 32px;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            margin: 0 0 12px;
-        }
-
-        p {
-            margin: 0 0 12px;
-            color: var(--text);
-        }
-
-        ul {
-            margin: 0 0 12px;
-            padding-left: 22px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: underline;
-        }
-
-        strong {
-            font-weight: 600;
+        #termly-code-snippet-support h1,
+        #termly-code-snippet-support h2,
+        #termly-code-snippet-support h3 {
+            color: var(--text) !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.01em !important;
         }
 
         footer {
@@ -124,13 +96,22 @@
             color: var(--muted);
         }
 
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            text-decoration: underline;
+        }
+
         @media (max-width: 480px) {
             main {
                 padding: 32px 20px 56px;
             }
 
-            .logo,
-            h1 {
+            .logo {
                 font-size: 28px;
             }
 
@@ -142,133 +123,26 @@
 </head>
 <body>
     <main>
+
         <header>
             <div class="logo"><span class="delta">&Delta;</span>Deltify</div>
-            <h1>Privacy Policy</h1>
-            <p class="effective">Effective June 3, 2026 · Last updated June 3, 2026</p>
         </header>
 
-        <section>
-            <h2>Overview</h2>
-            <p>
-                Deltify is built on a simple principle: your workout data
-                belongs to you, and stays on your device. Deltify is
-                operated by Deltify LLC, a California company. We don't run
-                servers, we don't sell ads, and we don't have user accounts.
-                This page describes what data the app handles and how.
-            </p>
-        </section>
 
-        <section>
-            <h2>What Deltify stores</h2>
-            <p>
-                As you use the app, Deltify creates and keeps a local record of:
-            </p>
-            <ul>
-                <li>Workout sessions you log (exercise, reps, duration, timestamp, and optional notes)</li>
-                <li>Exercise selections from the built-in catalog</li>
-                <li>Equipment preferences you set in the Equipment screen</li>
-            </ul>
-            <p>
-                All of this is stored exclusively on your iPhone or iPad using
-                Apple's SwiftData framework. It is never transmitted to a
-                Deltify server or shared with any third party.
-            </p>
-        </section>
+         <div name="termly-embed" data-id="fb8fe108-0088-4794-acfa-da4d0f2ad3c5"></div>
+        <script type="text/javascript">(function(d, s, id) {
+        var js, tjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://app.termly.io/embed-policy.min.js";
+        tjs.parentNode.insertBefore(js, tjs);
+        }(document, 'script', 'termly-jssdk'));</script>
 
-        <section>
-            <h2>What Deltify does not collect</h2>
-            <p>Deltify does not collect, request, or transmit:</p>
-            <ul>
-                <li>Personal information — no name, email, phone number, or address</li>
-                <li>Account credentials — no sign-up, no login, no user ID</li>
-                <li>Location data</li>
-                <li>Contacts, photos, health data, or other personal records</li>
-                <li>Device identifiers used for advertising or tracking</li>
-                <li>Usage analytics or behavioral metrics</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Local storage only</h2>
-            <p>
-                Deltify has no cloud component. Your data lives in a SwiftData
-                database file on your device and goes nowhere else. We do not
-                operate any sync service or remote backup.
-            </p>
-            <p>
-                If you have iCloud Backup enabled at the system level, Apple
-                may include the app's local data as part of its standard
-                device backup — that's a service between you and Apple, and
-                is outside Deltify's control.
-            </p>
-        </section>
-
-        <section>
-            <h2>No third-party analytics or sharing</h2>
-            <p>
-                Deltify includes no third-party analytics SDKs, advertising
-                networks, crash-reporting SDKs, or tracking pixels, and does
-                not itself collect usage analytics, crash logs, or behavioral
-                metrics. Deltify never transmits your data off your device or
-                to any third party.
-            </p>
-            <p>
-                The only ways data associated with the app can leave your
-                device are controlled by Apple and your own device settings,
-                not by Deltify: the system-level iCloud Backup described above,
-                and — if you have enabled <strong>Share With App
-                Developers</strong> under Analytics &amp; Improvements in iOS
-                Settings — aggregated, anonymized diagnostic and crash
-                information that Apple may make available to Deltify LLC. This
-                aggregated information is provided by Apple, is governed by your
-                device settings, and contains no information that identifies you.
-            </p>
-        </section>
-
-        <section>
-            <h2>Deleting your data</h2>
-            <p>
-                Because everything is stored locally, you are always in
-                control:
-            </p>
-            <ul>
-                <li>Individual workout sessions can be removed from the History screen by swiping to delete.</li>
-                <li>To remove <strong>all</strong> Deltify data, uninstall the app from your device. iOS deletes the app's local database when it removes the app.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Children's privacy</h2>
-            <p>
-                Deltify is intended for general audiences and does not
-                knowingly collect personal information from anyone,
-                including children under 13. Because the app collects no
-                personally identifiable information of any kind, there is no
-                data about any individual user to retain or disclose.
-            </p>
-        </section>
-
-        <section>
-            <h2>Changes to this policy</h2>
-            <p>
-                If this policy is updated, the revised version will be
-                posted at this URL with a new effective date. Material
-                changes may also be noted in the app's release notes.
-            </p>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>
-                Questions or feedback about privacy? Email
-                <a href="mailto:jacob@deltify.io">jacob@deltify.io</a>.
-            </p>
-        </section>
 
         <footer>
-            <p>&copy; 2026 Deltify LLC · <a href="mailto:jacob@deltify.io">jacob@deltify.io</a></p>
+            <p>&copy; 2026 Deltify LLC &middot; <a href="mailto:jacob@deltify.io">jacob@deltify.io</a></p>
         </footer>
+
     </main>
 </body>
 </html>
