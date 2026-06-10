@@ -49,7 +49,7 @@
             font-size: 32px;
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 24px;
+            margin-bottom: 0;
         }
 
         .logo .delta {
@@ -58,56 +58,28 @@
             margin-right: 6px;
         }
 
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin: 0 0 8px;
+        /* ─── Termly snippet overrides ─────────────────────────────────
+           Force Termly's injected content to inherit the page's dark
+           theme. Termly renders light-background text by default.
+        ──────────────────────────────────────────────────────────────── */
+        #termly-code-snippet-support,
+        #termly-code-snippet-support * {
+            background-color: var(--bg) !important;
+            color: var(--text) !important;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                "Helvetica Neue", Arial, sans-serif !important;
         }
 
-        .effective {
-            color: var(--muted);
-            font-size: 15px;
-            margin: 0;
+        #termly-code-snippet-support a {
+            color: var(--accent) !important;
         }
 
-        section {
-            margin-bottom: 32px;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            margin: 0 0 12px;
-        }
-
-        p {
-            margin: 0 0 12px;
-            color: var(--text);
-        }
-
-        ul {
-            margin: 0 0 12px;
-            padding-left: 22px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:focus {
-            text-decoration: underline;
-        }
-
-        strong {
-            font-weight: 600;
+        #termly-code-snippet-support h1,
+        #termly-code-snippet-support h2,
+        #termly-code-snippet-support h3 {
+            color: var(--text) !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.01em !important;
         }
 
         footer {
@@ -124,13 +96,22 @@
             color: var(--muted);
         }
 
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover,
+        footer a:focus {
+            text-decoration: underline;
+        }
+
         @media (max-width: 480px) {
             main {
                 padding: 32px 20px 56px;
             }
 
-            .logo,
-            h1 {
+            .logo {
                 font-size: 28px;
             }
 
@@ -141,212 +122,26 @@
     </style>
 </head>
 <body>
-<!--
-  ============================================================
-  ATTORNEY REVIEW FLAGS — Deltify Terms of Use
-  This comment does not render. Remove before publishing if desired.
-
-  These clauses are jurisdiction-dependent and warrant counsel review,
-  especially under California law and for international (175-region) reach:
-
-  1. LIMITATION OF LIABILITY (§"Limitation of liability")
-     - Cal. Civ. Code §1668 voids contractual exemptions for one's own
-       fraud, willful injury, or violation of law. A blanket "not liable
-       for anything" is partially unenforceable in CA.
-     - Gross negligence cannot be waived (City of Santa Barbara v.
-       Superior Court, 42 Cal.4th 747 (2007)). The "to the maximum extent
-       permitted by law" + savings clause is intended to preserve the rest
-       if a court strikes part — confirm wording.
-     - The $0 / fees-paid damages cap on a free app: confirm enforceability;
-       courts sometimes scrutinize total caps.
-     - Conspicuousness: counsel may want this section and the warranty
-       disclaimer in ALL CAPS (currently bolded as a readable compromise).
-
-  2. ASSUMPTION OF RISK (§"Assumption of risk")
-     - Pre-injury liability waivers vary widely by state; some states are
-       hostile to them entirely. CA enforces for ordinary negligence if
-       clear/unambiguous, NOT for gross negligence.
-     - App is rated 9+. Waivers are generally unenforceable against minors;
-       confirm whether a parent/guardian acknowledgment is warranted.
-
-  3. NO WARRANTY (§"The app is provided 'as is'")
-     - UCC §2-316 conspicuousness convention favors ALL CAPS for the
-       merchantability/fitness disclaimer. Currently bolded — confirm.
-
-  4. GOVERNING LAW / VENUE (§"Governing law")
-     - Forum-selection and choice-of-law against international consumers
-       (EU/UK) may be overridden by mandatory local consumer-protection law.
-     - Confirm correct venue/county for Deltify LLC.
-
-  5. ACCEPTANCE / FORMATION (§"Acceptance of these terms")
-     - "Use = acceptance" (browsewrap) is weakly enforceable without
-       conspicuous notice + manifestation of assent. A first-launch
-       in-app acknowledgment (clickwrap) materially strengthens all of the
-       above. Consider Apple's custom EULA field in App Store Connect.
-  ============================================================
--->
     <main>
+
         <header>
             <div class="logo"><span class="delta">&Delta;</span>Deltify</div>
-            <h1>Terms of Use</h1>
-            <p class="effective">Effective June 3, 2026 · Last updated June 3, 2026</p>
         </header>
 
-        <section>
-            <h2>Overview</h2>
-            <p>
-                These Terms of Use ("Terms") govern your use of Deltify (the
-                "app"), a workout-tracking app operated by Deltify LLC, a
-                California company ("Deltify," "we," "us"). Please read them
-                carefully. They explain what the app is, what it is not, and
-                the limits of our responsibility. Your privacy is covered
-                separately in our Privacy Policy.
-            </p>
-        </section>
 
-        <section>
-            <h2>Acceptance of these terms</h2>
-            <p>
-                By downloading, installing, or using Deltify, you agree to
-                these Terms. If you do not agree, do not use the app. If you
-                are under the age of legal majority where you live, you may use
-                the app only with the involvement and consent of a parent or
-                guardian, who accepts these Terms on your behalf.
-            </p>
-        </section>
-
-        <section>
-            <h2>Deltify is not medical advice</h2>
-            <p>
-                Deltify is a fitness-tracking and exercise-suggestion tool. It
-                is <strong>not</strong> a medical device, a healthcare service,
-                or a substitute for professional medical care. Deltify does not
-                diagnose, treat, cure, or prevent any condition, and it does not
-                provide medical advice.
-            </p>
-            <p>
-                <strong>Consult a physician or qualified healthcare provider
-                before beginning any exercise program</strong>, particularly if
-                you have or may have a medical condition, are pregnant, are
-                injured or recovering from injury, or have any concern about
-                whether exercise is safe for you. The app does not know your
-                medical history and does not account for individual health
-                conditions. If you experience pain, dizziness, shortness of
-                breath, or any other warning sign during exercise, stop
-                immediately and seek medical attention.
-            </p>
-        </section>
-
-        <section>
-            <h2>Not professional fitness guidance</h2>
-            <p>
-                The muscle balance score, exercise suggestions, and any other
-                output the app produces are <strong>informational and
-                general</strong> in nature. They are generated automatically
-                and are not personalized professional training instruction, and
-                not a substitute for a certified personal trainer, coach, or
-                physical therapist who can assess you in person.
-            </p>
-            <p>
-                We make no promise that the score or suggestions are accurate,
-                complete, suitable for your goals, or appropriate for your body,
-                fitness level, or circumstances. You are responsible for
-                deciding whether any suggested exercise is appropriate for you,
-                and for performing it safely and with proper form.
-            </p>
-        </section>
-
-        <section>
-            <h2>Assumption of risk</h2>
-            <p>
-                Physical exercise carries inherent risks, including the risk of
-                serious injury. <strong>You choose to exercise voluntarily and
-                at your own risk.</strong> To the fullest extent permitted by
-                law, you knowingly and freely assume all risks associated with
-                physical activity you undertake while using or relying on
-                Deltify, whether those risks are known or unknown.
-            </p>
-            <p>
-                You are solely responsible for exercising within your own
-                ability, using appropriate equipment in good condition, warming
-                up, using correct technique, and stopping when your body signals
-                you should.
-            </p>
-        </section>
-
-        <section>
-            <h2>The app is provided "as is"</h2>
-            <p>
-                <strong>Deltify is provided "as is" and "as available," without
-                warranties of any kind, whether express or implied.</strong> To
-                the fullest extent permitted by law, we disclaim all implied
-                warranties, including merchantability, fitness for a particular
-                purpose, and non-infringement. We do not warrant that the app
-                will be uninterrupted, error-free, secure, or that any result,
-                score, or suggestion will be accurate or reliable.
-            </p>
-        </section>
-
-        <section>
-            <h2>Limitation of liability</h2>
-            <p>
-                <strong>To the maximum extent permitted by applicable law,
-                Deltify LLC will not be liable for any injury, illness, death,
-                or for any direct, indirect, incidental, special, consequential,
-                or punitive damages, losses, or costs arising out of or related
-                to your use of, or inability to use, the app</strong> — including
-                any reliance on the muscle balance score or exercise
-                suggestions — even if we have been advised of the possibility of
-                such damages.
-            </p>
-            <p>
-                Where liability cannot be fully excluded under applicable law,
-                our total liability for any claim relating to the app will not
-                exceed the amount you paid us for the app, which for a free app
-                is zero.
-            </p>
-            <p>
-                Nothing in these Terms excludes or limits any liability that
-                cannot be excluded or limited under the law that applies to you.
-                Some jurisdictions do not allow certain exclusions or
-                limitations, so some of the above may not apply to you, in which
-                case our liability is limited to the smallest extent permitted by
-                law.
-            </p>
-        </section>
-
-        <section>
-            <h2>Governing law</h2>
-            <p>
-                These Terms are governed by the laws of the State of California,
-                without regard to its conflict-of-laws rules. Any dispute that is
-                not resolved informally will be subject to the courts located in
-                California, except where the mandatory consumer-protection laws
-                of your own country or state give you the right to bring a claim
-                elsewhere.
-            </p>
-        </section>
-
-        <section>
-            <h2>Changes to these terms</h2>
-            <p>
-                If these Terms are updated, the revised version will be posted at
-                this URL with a new effective date. Your continued use of the app
-                after a change takes effect means you accept the updated Terms.
-            </p>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>
-                Questions about these Terms? Email
-                <a href="mailto:jacob@deltify.io">jacob@deltify.io</a>.
-            </p>
-        </section>
+        <div name="termly-embed" data-id="f3b70f05-ab45-4f06-9e55-be881e1b14d3"></div>
+        <script type="text/javascript">(function(d, s, id) {
+        var js, tjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://app.termly.io/embed-policy.min.js";
+        tjs.parentNode.insertBefore(js, tjs);
+        }(document, 'script', 'termly-jssdk'));</script>
 
         <footer>
-            <p>&copy; 2026 Deltify LLC · <a href="mailto:jacob@deltify.io">jacob@deltify.io</a></p>
+            <p>&copy; 2026 Deltify LLC &middot; <a href="mailto:jacob@deltify.io">jacob@deltify.io</a></p>
         </footer>
+
     </main>
 </body>
 </html>
